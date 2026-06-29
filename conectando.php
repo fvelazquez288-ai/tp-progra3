@@ -3,7 +3,7 @@
 // conectando.php
 $servername = "localhost";
 $username = "root";
-$password = "root"; // Ajustar según entorno MAMP/XAMPP
+$password = "root";
 $dbname = "mi_banco_db";
 
 $conexion = mysqli_connect($servername, $username, $password, $dbname);

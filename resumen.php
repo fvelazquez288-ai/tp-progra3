@@ -1,6 +1,5 @@
 <?php
 
-// resumen.php
 header('Content-Type: text/plain; charset=utf-8');
 session_start();
 
@@ -38,7 +37,6 @@ if ($datos_tarjeta_usuario) {
 
     $numero_cuenta_tarjeta = $datos_tarjeta_usuario['num_cuenta'];
 
-    // periodo es 'YYYY-MM'; ordenamos descendente para obtener la más reciente primero
     $sql_buscar_liquidaciones = "SELECT id_liquidacion, periodo, fecha_vencimiento, total_a_pagar, pago_minimo
                                  FROM liquidaciones 
                                  WHERE num_cuenta = '$numero_cuenta_tarjeta' 

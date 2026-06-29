@@ -148,7 +148,6 @@ namespace Progra3Card.Administrativo
                 {
                     conexionBaseDatos.Open();
 
-                    // Insertar liquidación con las columnas reales de la BD
                     string sqlInsertarLiquidacion = "INSERT INTO liquidaciones (num_cuenta, periodo, fecha_vencimiento, total_a_pagar, pago_minimo) " +
                                                     "VALUES (" + numeroCuentaTarjeta + ", '" + periodoCombinado + "', '" + fechaVencimientoLiquidacion + "', " + totalAPagar + ", " + pagoMinimo + ")";
                     MySqlCommand comandoInsertarLiquidacion = new MySqlCommand(sqlInsertarLiquidacion, conexionBaseDatos);
