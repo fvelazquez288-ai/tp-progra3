@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Tarjetas - Creación de Usuario</title>
+    <title>Mis Tarjetas - Activación de Cuenta</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-100 font-sans min-h-screen flex flex-col justify-between">
@@ -13,65 +13,52 @@
     </header>
 
     <main class="flex-grow flex items-center justify-center p-6">
-        <div class="bg-white rounded-lg shadow-lg max-w-2xl w-full p-8">
-            <h2 class="text-2xl font-bold text-[#004691] mb-6 text-center">Activación de Usuario Web</h2>
-            
-            <form action="altas.php" method="POST" class="space-y-6">
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="bg-white rounded-lg shadow-lg max-w-lg w-full p-8">
+            <h2 class="text-2xl font-bold text-[#004691] mb-2 text-center">Activación de Usuario Web</h2>
+            <p class="text-sm text-gray-500 text-center mb-6">
+                Ingresá tu documento para activar el acceso web a tu tarjeta Progra3card.
+            </p>
+
+            <form action="altas.php" method="POST" class="space-y-5">
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Tipo de documento</label>
                         <select name="tipo_doc" class="w-full p-3 border border-gray-300 rounded bg-gray-50 text-gray-700 focus:outline-none focus:border-blue-500">
-                            <option value="DNI">Documento Nacional de Identidad (DNI)</option>
+                            <option value="DNI">DNI</option>
                             <option value="PASAPORTE">Pasaporte</option>
                         </select>
                     </div>
                     <div>
                         <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Número de documento</label>
-                        <input type="text" name="documento" required class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Nombre</label>
-                        <input type="text" name="nombre" required class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Apellido</label>
-                        <input type="text" name="apellido" required class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
-                    </div>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Fecha de Nacimiento</label>
-                        <input type="date" name="fecha_nacimiento" required class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
-                    </div>
-                    <div>
-                        <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Correo Electrónico</label>
-                        <input type="email" name="email" required class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
+                        <input type="text" name="documento" required
+                               class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
                     </div>
                 </div>
 
                 <hr class="border-gray-200">
 
                 <div>
-                    <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Nombre de Usuario Web</label>
-                    <input type="text" name="usuario" required class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
+                    <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Elegí tu usuario web</label>
+                    <input type="text" name="usuario" required
+                           class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
                         <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Contraseña</label>
-                        <input type="password" name="passwordA" required class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
+                        <input type="password" name="passwordA" required
+                               class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
                     </div>
                     <div>
-                        <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Repetir Contraseña</label>
-                        <input type="password" name="passwordB" required class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
+                        <label class="block text-xs font-semibold text-gray-500 uppercase mb-1">Repetir contraseña</label>
+                        <input type="password" name="passwordB" required
+                               class="w-full p-3 border border-gray-300 rounded bg-gray-50 focus:outline-none focus:border-blue-500">
                     </div>
                 </div>
 
-                <button type="submit" name="registrar" class="w-full bg-[#004691] hover:bg-blue-800 text-white font-medium py-3 rounded-full transition duration-200">
+                <button type="submit" name="registrar"
+                        class="w-full bg-[#004691] hover:bg-blue-800 text-white font-medium py-3 rounded-full transition duration-200">
                     Activar Mi Cuenta Web
                 </button>
             </form>
